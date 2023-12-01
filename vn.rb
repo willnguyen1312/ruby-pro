@@ -1,5 +1,13 @@
-puts "Hello Vi!"
+def execute(func)
+  puts "Executing the function..."
+  result = func.call
+  puts "Result: #{result}"
+end
 
-hello_world = "Hello World!"
+say_hello = -> { "Hello!" }
 
-print "Hello Nam!"
+add = ->(x, y) { x + y }
+
+execute(say_hello)
+
+execute(-> { 3 * 5 })
